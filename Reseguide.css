@@ -1,0 +1,491 @@
+*{
+    margin:0;
+    padding:0;
+    font-family: Verdana, Geneva, Tahoma;
+    box-sizing: border-box;
+
+}
+body{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center; /* Horisontell centrering */
+    flex-direction: column; /* Ordna element vertikalt */
+    background-color: rgb(208, 215, 215);
+    
+}
+/*..Navbar.............................*/
+
+nav{
+   background: rgb(193, 205, 209);
+   height: 80px;
+   width: 100%;
+   line-height: 80px; /*..samma linje med logo1..*/
+   box-shadow:0px 2px 8px rgba(2, 38, 91, 0.513);
+
+}
+label.logo1{
+    color: rgb(4, 4, 118);
+    font-size: 40px;
+    line-height: 80px; /*..samma linje med nav..*/
+    padding: 0 20px;
+    font-weight:bolder;
+    float: left;
+    font-style:inherit;
+}
+.nav-links ul{
+    margin-right: 20px;
+    padding: 0;
+    float: right; 
+
+}
+.nav-links{
+    text-align: right;
+}
+
+.nav-links ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+    transition: transform 0.8s cubic-bezier(0.25, 0.8, 0.25, 1), opacity 0.8s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+
+.nav-links ul li a{
+    color: rgb(2, 2, 123);
+    text-decoration: none;
+    font-size: 20px;
+}
+
+/*..SLIDE SECTION Container = olika bilder........................*/
+.SlideHeader{
+    min-height: 70vh; /* Gör att headern täcker nästan hela höjden på sidan 70vh*/
+    width: 100%;
+    background-color: rgb(217, 224, 230);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    margin-top: 30px; /* Lägg till denna om nav har en höjd på 60px */
+
+}
+.slide-container{
+    position: relative;  /*...origin=relativ..*/
+    width: 95%;  /*...origin=800px.*/
+    height: 590px;  /*...origin=350px.*/
+    margin: 25px auto; /* Centrerar slide-container original=25px auto */
+    border: 3px solid #030b59;
+    box-shadow: 0 0 8px 5px rgba(5, 97, 94, 0.69);
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.slide-container .slides{   /*...Bild storlek..*/
+    width: 100%;
+    height: calc(100% - 55px); /*.bildens höjd innanför slide-border..*/
+    position: relative;
+    overflow: hidden;
+}
+.slide-container .slides img{  /*...Bild storlek..*/
+    width:100%;
+    height: 100%;
+    position: absolute;
+    object-fit: cover;
+}
+.slide-container .slides img:not(.active){
+    top:0;
+    left: -100%;
+}
+span.next, span.prev{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 14px;
+    color:#eee;
+    font-size: 24px;
+    font-weight: bold;
+    transition: 0.5s;
+    border-radius: 3px;
+    user-select: none;
+    cursor: pointer;
+    z-index: 1;
+}
+span.next{
+    right: 20px;
+}
+span.prev{
+    left: 20px;
+}
+span.next:hover, span.prev:hover{
+    background-color: #ede6d6;
+    opacity: 0.8;
+    color: #041095;
+}
+.dotsContainer{
+    position: absolute;
+    bottom: 5px;
+    z-index: 3;
+    left:50%;
+    transform: translateX(-50%);
+    
+}
+.dotsContainer .dot{
+    width: 15px;
+    height: 15px;
+    margin: 0px 2px;
+    border: 3px solid #eee;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+.dotsContainer .active{
+    background-color: #051e80;
+}
+@keyframes next1{
+    from{
+        left:0%;   
+    }
+    to{
+        left: -100%;
+    }
+}
+@keyframes next2{
+    from{
+        left:100%;   
+    }
+    to{
+        left: 0%;
+    }
+}
+@keyframes prev1{
+    from{
+        left:0%;   
+    }
+    to{
+        left: 100%;
+    }
+}
+@keyframes prev2{
+    from{
+        left:-100%;   
+    }
+    to{
+        left: 0%;
+    }
+}
+/* små skärmar (ex. mobiltelefoner) */
+@media (max-width: 768px) {
+    .card-Temp {
+        min-height: 80vh;  /* Mer höjd på mindre skärmar */
+        
+        
+    }
+}
+
+/* större skärmar (ex. laptops och desktop) */
+@media (min-width: 769px) {
+    .card-Temp {
+        min-height: 50vh;  /* Minskar höjden på större skärmar */
+       
+    }
+}
+
+
+ /*..HOME SECTION:  .h1, rubrik under slider=contentBox.  ..*/
+.mainText{       /* section class */
+    margin-top: 30px;
+    margin-bottom: 15px;
+    padding: 20px;
+    height: 900px;
+}
+.contentBox{      /* div class under section */
+    background-color: #f0f0f0;  /* Bakgrundsfärg för rektangeln */
+    padding: 20px;  /* Utrymme runt texten */
+    border-radius: 12px;  /* Rundade hörn på rektangeln */
+    max-width: 98%;  /* Du kan justera bredden efter behov */
+    margin: 0 auto;  /* Centrerar contentBoxen */
+    box-shadow:0px 2px 8px rgba(2, 38, 91, 0.513);
+
+}
+.sourcetext{
+    font-size: small;
+}
+h1, h2, h3, h4, h5{
+    color: rgb(4, 4, 118);
+}
+/* små skärmar main text section(ex. mobiltelefoner) */
+@media (max-width: 768px) {
+    .mainText {
+        min-height: 80vh;  /* Mer höjd på mindre skärmar */
+        position: relative; /* Förhindrar att det överlappar */
+        z-index: 1; /* Lägre staplingsordning */
+        margin-top: 20px; /* Avstånd ovanför */
+        padding-bottom: 20px;
+        
+        
+    }
+}
+
+/* större skärmar (ex. laptops och desktop) */
+@media (min-width: 769px) {
+    .mainText {
+        min-height: 50vh;  /* Minskar höjden på större skärmar */
+        position: relative; /* För säkerhet */
+        z-index: 1;
+        margin-top: 30px; /* Extra avstånd ovanför */
+    }
+}
+
+
+/*..GRAPH & TEMPERATURE section: Graf med land och hav temperatur........................................................*/
+
+.card-Temp{
+    margin-top: -300px;  /* Konstigt! Jag kom inte på nåt annat sätt! */
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 20px;   
+}
+.card{
+    width: 500px;
+    height: 400px;
+    background-color:#f0f0f0 ; 
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow:0px 2px 8px rgba(2, 38, 91, 0.513);
+    margin: 20px;
+}
+.card img {
+    width:100%;
+    height: auto;
+}
+.card-content {
+    padding: 16px;
+}
+.card-content h3 {
+    font-size: 20px;
+    margin-bottom: 8px;
+}
+.card-content p{
+    color: #666;
+    font-size: 15px;
+    line-height: 1.3;
+
+}
+/* små skärmar card section (ex. mobiltelefoner) */
+@media (max-width: 768px) {
+    .card-Temp {
+        min-height: 80vh;  /* Mer höjd på mindre skärmar */
+        position: relative; /* Förhindrar att det överlappar */
+        z-index: 1; /* Lägre staplingsordning */
+        margin-top: 490px; /* Avstånd ovanför från föregående sida */
+    }
+}
+
+/* större skärmar (ex. laptops och desktop) */
+@media (min-width: 769px) {
+    .card-Temp {
+        min-height: 50vh;  /* Minskar höjden på större skärmar */
+        position: relative; /* För säkerhet */
+        z-index: 1;
+    }    
+}
+
+
+/*---CULTURE SECTION----------------------------------------*/
+
+.culture{
+    margin-top: 10px;
+    margin-bottom: 100px;
+    height: 600px;
+    position: absolute;
+    background: url(../Reseguide-Mauritius/Images/Culture.JPG) no-repeat center center/cover;
+    color:white;
+    padding: 50px 20px;
+    text-align: center;
+
+}
+.culture-h2{
+    margin: 10px 0;
+    color:white;
+    font-size: 30px;
+    text-align: center;
+    width: 100%;
+}
+.culture-content{
+    background: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    display: inline-block;
+    border-radius: 12px;
+    max-width: 98%;
+    margin: 10px auto;
+    box-shadow: 0px 2px 8px rgba(2, 38, 91, 0.513);
+    position: relative;
+    z-index: 2;
+}
+.culture-content h5{
+    color:white;
+    font-size: 15px;
+}
+
+/* små skärmar main text section(ex. mobiltelefoner) */
+@media (max-width: 768px) {
+    .culture {
+        min-height: 80vh;  /* Mer höjd på mindre skärmar */
+        position: relative; /* Förhindrar att det överlappar */
+        z-index: 1; /* Lägre staplingsordning */
+        margin-top: 20px; /* Avstånd ovanför */
+        padding-bottom: 50px;
+        
+        
+    }
+}
+
+/* STÖRRE skärmar (ex. laptops och desktop) */
+@media (min-width: 769px) {
+    .culture {
+        min-height: 50vh;  /* Minskar höjden på större skärmar */
+        position: relative; /* För säkerhet */
+        z-index: 1;
+        margin-top: 30px; /* Extra avstånd ovanför */
+    }
+}
+
+/*---Sea Window VISUAL SECTION----------------------------------------*/
+.Sea-window-part{
+    margin-top: -50px;
+    position: relative;
+    width: 100%;
+    height: 600px; /* Gör så att det fyller hela höjden på sidan=fönster effekt */
+    overflow: hidden;
+}
+.Sea-visual{
+    position: relative;
+    width: 100%;
+    height: 100%;
+
+}
+.Sea-visual img{
+    width: 100%;
+    height: 600px;
+    object-fit: cover; /* För att bilden ska fylla hela sektionen utan att förlora proportionerna */
+    border-top: 15px solid #000;
+    border-left: 20px solid #000; /* Vänster kant på bilden */
+    border-right: 20px solid #000; /* Höger kant på bilden */
+    border-bottom: 10px solid #000; /* Nedre kant på bilden */
+    box-sizing: border-box; /* används för att se till att border inte påverkar bildens dimensioner */
+
+}
+/* Fönster WINDOW Effect ovanpå bilden */
+.window {
+    position: absolute;
+    border: 20px solid#455b5e
+    ; /* Fönsterkanterna */
+    background: transparent; /* Genomskinlig bakgrund */
+    width: 20%; /* Storlek på fönster */
+    height: 97%; /* Storlek på fönster */
+    background-size: 100%;
+    background-position: center;
+}
+/* små skärmar main text section(ex. mobiltelefoner) */
+@media (max-width: 768px) {
+    .Sea-window {
+        min-height: 80vh;  /* Mer höjd på mindre skärmar */
+        position: relative; /* Förhindrar att det överlappar */
+        z-index: 1; /* Lägre staplingsordning */
+        margin-top: 20px; /* Avstånd ovanför */
+        padding-bottom: 10px;
+        
+        
+    }
+}
+
+/* större skärmar (ex. laptops och desktop) */
+@media (min-width: 769px) {
+    .Sea-window {
+        min-height: 50vh;  /* Minskar höjden på större skärmar */
+        position: relative; /* För säkerhet */
+        z-index: 1;
+        margin-top: 30px; /* Extra avstånd ovanför */
+    }
+}
+
+/*..-Food section-...........................................................*/
+
+.food {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+}
+.food-h2 {
+    margin: 40px 0;
+    font-size: 30px;
+    text-align: center; /* Centers the heading horizontally */
+    width: 100%; /* Ensures it spans the full width */
+}
+
+.main-course-wrapper {
+    display: flex;
+    width: 400px;
+    height: 200px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #fff;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+.dish-image-wrapper {
+    flex: 1;
+    width: 37.33%; /*..gör att bilden är 1/3 (33.33%) av hela card..*/
+    height: 100%;
+    padding: 15px;
+    box-sizing: border-box; /* Inkluderar padding i width/height kalkylering */
+}
+
+.dish-image-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.main-course-name-wrapper {
+    flex: 2;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.main-course-name-wrapper h5 {
+    margin: 0;
+    font-size: 14px;
+    color: #333;
+}
+
+.main-course-name-wrapper h6 {
+    margin: 5px 0 0;
+    font-size: 12px;
+    color: #777;
+}
+
+
+/* -------FOOTER SECTION------------------------------------ */
+.footer-content{
+    background-color: #042b31;
+    color: rgb(227, 233, 226);
+    text-align: left;
+    padding:10px;     /* Padding ovanför och under texten */
+    margin-top: 20px;  /* Avstånd ovanför footern */
+    width: 100%;
+    height: 50px;
+
+}
+
+.footer p {
+    margin: 0;
+    padding-left: 20px; /* Avstånd från vänster sida */
+    font-size: 10px;
+}

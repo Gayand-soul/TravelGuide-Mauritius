@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minirese-guide</title>
+    <link rel="stylesheet" href="../Reseguide-Mauritius/Reseguide.css">
+    <script src="../Reseguide-Mauritius/Reseguide.js" defer></script>
+</head>
+
+<body>
+    <!--Navigation bar section------------------------------------------->
+    <section class="header">
+        <div class="nav-links" id="navbar">
+            <nav>
+                <label class="logo1">MyWorld Mauritius</label>
+                <ul>
+                    <li><a href="#mainText">HOME</a></li>
+                    <li><a href="#culture">CULTURE</a></li>
+                    <li><a href="#food">FOOD</a></li>
+                    
+                </ul>
+            </nav>
+        </div>
+    </section>
+
+    <!--Header section-big picture--------------------------------->
+    <section class="SlideHeader">
+        <div class="slide-container">
+            <div class="slides">
+                <img src="../Reseguide-Mauritius/Images/MauriKarta.JPG" class="active">
+                <img src="../Reseguide-Mauritius/Images/Card_Pic8.JPG">
+                <img src="../Reseguide-Mauritius/Images/Card_pic30.JPG">
+                <img src="../Reseguide-Mauritius/Images/Card_Pic4.JPG">
+                <img src="../Reseguide-Mauritius/Images/Card_pic5.JPG">
+                <img src="../Reseguide-Mauritius/Images/Card_pic6.JPG">
+                <img src="../Reseguide-Mauritius/Images/Card_pic7.JPG">
+                
+            </div>
+    
+            <div class="buttons">
+                <span class="next">&#10095;</span>
+                <span class="prev">&#10094;</span>
+            </div>
+    
+            <div class="dotsContainer">
+                <div class="dot active" attr='0' onclick="switchImage(this)"></div>
+                <div class="dot" attr='1' onclick="switchImage(this)"></div>
+                <div class="dot" attr='2' onclick="switchImage(this)"></div>
+                <div class="dot" attr='3' onclick="switchImage(this)"></div>
+                <div class="dot" attr='4' onclick="switchImage(this)"></div>
+                <div class="dot" attr='5' onclick="switchImage(this)"></div>
+                <div class="dot" attr='6' onclick="switchImage(this)"></div>
+    
+            </div>
+        </div> 
+
+    </section>
+    
+       
+    <!--HOME big-Title and text under the slider--------13 dec 2024 jobbar med dessa!!!!---------------------------> 
+    <section class="mainText" id="mainText">
+        <div class="contentBox">
+            <h1>World`s Beautiful Island</h1>
+            <p>A new way of travelling, new way of living, new places to discover..
+                Mauritius, an Indian Ocean island nation, is known for its beaches, 
+                lagoons and reefs. The mountainous interior includes Black River Gorges 
+                National Park, with rainforests, waterfalls, hiking trails and wildlife 
+                like the flying fox. Capital Port Louis has sites such as the Champs de 
+                Mars horse track, Eureka plantation house and 18th-century Sir Seewoosagur
+                Ramgoolam Botanical Gardens.
+                <em class="sourcetext">Text:Google</em>
+            </p><br>
+
+                <h4>Soils and climate</h4>
+            
+            <p>More than half of the country’s area is arable, and it is almost entirely 
+                planted in sugarcane, the major export crop. Vegetables and tea for local 
+                consumption are also grown. The climate is maritime subtropical, with fairly uniform temperature 
+                throughout the year. Mean temperatures vary from the mid-70s F (low to mid-20s C)
+                at sea level to the upper 60s F (upper 10s C) on the high plateau. Two seasons are
+                recognized: hot (December to April) and cool (June to September). Annual rainfall 
+                varies from around 35 inches (900 mm) on the west coast to 60 inches (1,525 mm) on 
+                the southeast coast and about 200 inches (5,080 mm) on the central plateau.
+                <em class="sourcetext">Text:britannica.com</em><br><br>
+                
+                <h4>Ethnic groups, languages, and religion</h4>
+            
+                Approximately two-thirds of the population is of Indo-Pakistani origin, most of whom are
+                descendants of indentured labourers brought to work in the sugar industry during the 19th an
+                d early 20th centuries. About one-fourth of the population is Creole (of mixed French and African
+                descent), and there are small numbers of people of Chinese and Franco-Mauritian descent.
+                <em class="sourcetext">Text:britannica.com</em><br><br>
+                
+                <h4>Economy</h4>
+
+                Mauritius has a mixed developing economy based on manufactured exports, agriculture, tourism, 
+                and financial services. Government efforts to diversify the economy after 1980 have been successful, 
+                and the island is no longer as completely dependent on sugar production as it was throughout most of 
+                its history. The gross domestic product, among the highest of African countries, grew more rapidly than
+                the population in the 1990s and 2000s.<br><br>
+
+                <h5>Agriculture, forestry, and fishing</h5>
+
+                Although the significance of the agricultural sector has diminished with efforts to diversify the 
+                economy, it is still important. Sugar production, generating about one-sixth of export earnings, 
+                occupies about four-fifths of the total arable land. Tea and tobacco are also cash crops. Subsistence 
+                crops include potatoes, tomatoes, and bananas. The livestock population primarily consists of poultry, 
+                sheep, goats, pigs, and cattle.<em class="sourcetext">Text:britannica.com</em><br><br>
+
+            </p> 
+        </div>
+    </section>
+
+    <!--Graf med temperatur------------------------------------------------------------->
+
+    <div class="card-Temp">
+
+        <div class="card">
+            <img src="../Reseguide-Mauritius/Images/FlicnFlacBeach.JPG" alt="Average temperature graph"><br>
+            <div class="card-content">
+                <h3>Flic n Flac Beach</h3>
+            </div>
+        </div>
+        <div class="card">
+                <img src="../Reseguide-Mauritius/Images/BlackriverBeach4.JPG" alt="Average sea temperature graph"><br>
+                <div class="card-content">
+                    <h3>Black river Beach</h3> 
+                </div>    
+        </div>
+        <div class="card">
+                <img src="../Reseguide-Mauritius/Images/LeMorneBeach.JPG" alt="Average sea temperature graph"><br>
+                <div class="card-content">
+                    <h3>Le Morne Beach</h3>
+                    
+                </div>    
+        </div>
+        <div class="card">
+            <img src="../Reseguide-Mauritius/Images/BlueBayBeach.JPG" alt="Average sea temperature graph"><br>
+            <div class="card-content">
+                <h3>Blue Bay Beach</h3>
+                
+            </div>   
+        </div>
+
+        <div class="card">
+            <img src="../Reseguide-Mauritius/Images/LandWeather.JPG" alt="Average temperature graph"><br>
+            <div class="card-content">
+                <h3>Temperature on land</h3>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="../Reseguide-Mauritius/Images/GrisGrisBeach.JPG" alt="Average temperature graph"><br>
+            <div class="card-content">
+                <h3>Gris Gris Beach</h3>
+                
+            </div>
+        </div>
+         
+    </div><br><br>
+    
+    <!--Culture section------------------------------------------>
+    <section class="culture" id="culture">
+        <div class="culture-content">
+            <h2 class="culture-h2">Culture life</h2>
+                <p> Mauritius offers a rich mixture of the many cultures and 
+                    traditions of its different peoples. The ethnic and religious 
+                    diversity of Mauritius also means that there are many holidays
+                    and festivals scheduled throughout the year. <br><br>
+
+                    <h5>Hindu festivals:</h5>Maha Shivaratree (see Mahā-śivarātrī) 
+                    in February and March and Divali in late October and November.
+                    The Tamil holiday of Thaipoosam Cavadee, usually held in January
+                    or February, which includes fire-walking ceremonies.<br><br>
+
+                    <h5>The Catholic festivals</h5>In honour of
+                    Père Laval in September, All Saints’ Day in November, 
+                    and Christmas in December.<br><br> 
+                    <h5>The lively Chinese Spring Festival celebration</h5>
+                    This is usually held in January or February.<br><br>
+
+                    <h5>The Muslim festivals</h5>ʿĪd al-Fiṭr, marking the end of Ramadan.<br><br>
+                     
+                    The entire country observes Abolition of Slavery Day on February 1, 
+                    Republic Day on March 12, Labour Day on May 1, and Arrival of Indentured Laborers Day on November 2.<br><br>
+
+                    Mauritius is known for the séga, a popular folk dance consisting of 
+                    suggestive movements of the hips and arms to a rhythmic beat. The dance 
+                    can be traced back to the 18th century, when it was performed by slaves.<br><br>
+
+                    Representational and abstract painting flourish, and there are art galleries
+                    in the major towns. The major national cultural institutions are the Palace 
+                    Theatre in Rose Hill, the Port Louis Theatre, the Mauritius Institute, which 
+                    includes a natural history museum and a historical museum, and the Mauritius 
+                    Archives. There are both public and institutional libraries.
+                    <em class="sourcetext">Text:britannica.com</em><br><br>
+
+                </p>
+
+        </div>
+    </section>
+    
+    <!-- Sea through window visual sektion ------------------------------> 
+    <section class="Sea-window-part" id="Sea-window">
+        <div class="Sea-visual">
+            <picture>
+<<<<<<< HEAD
+                <img src="SeaShore-2018.jpg" alt="Culture Image">
+=======
+                <img src="../Reseguide-Mauritius/Images/SeaShore-1.JPG" alt="Sea Image through a big window">
+>>>>>>> 8638e98 (Lägger till Reseguide-Mauritius)
+            </picture>
+
+            <!-- Fönstren (divs med bakgrundsbild) -->
+            <div class="window" style="top: 10px; left: 30%;"></div>
+            <div class="window" style="top: 10px; left: 15%;"></div>
+            <div class="window" style="top: 10px; left: 5%;"></div>
+            <div class="window" style="top: 10px; left: 50%;"></div>
+            <div class="window" style="top: 10px; left: 55%;"></div>
+            <div class="window" style="top: 10px; left: 70%;"></div>
+        </div>
+    </section>
+    
+
+    <!--Food section-------------------------------------------------------->
+
+    <h2 class="food-h2">The Cuisine Of Mauritius</h2>
+    <section class="food" id="food">
+        <!-- Row 1 -->
+        <div class="main-course-wrapper">
+            <div class="dish-image-wrapper">
+                <img src="../Reseguide-Mauritius/Images/Vindaloo.JPG" alt="sallad">
+            </div>
+            <div class="main-course-name-wrapper">
+                <h5>Delicious Vindaloo Curry</h5>
+                <h6>Cherry tomato, chicken, onions, ghee and Vindaloo spicemix.</h6>
+            </div>
+        </div>
+        <div class="main-course-wrapper">
+            <div class="dish-image-wrapper">
+                <img src="../Reseguide-Mauritius/Images/FoodBolRenverser.JPG" alt="sallad">
+            </div>
+            <div class="main-course-name-wrapper">
+                <h5>Famous Sino-Mauritian Dish</h5>
+                <h6>Bol Renversé is a rice-based dish, served with a stir-fry sauce, similar to chop suey.</h6>
+            </div>
+        </div>
+
+        <!-- Row 2 -->
+        <div class="main-course-wrapper">
+            <div class="dish-image-wrapper">
+                <img src="../Reseguide-Mauritius/Images/ChineseFood.JPG" alt="sallad">
+            </div>
+            <div class="main-course-name-wrapper">
+                <h5>Variation of Rice and Curry</h5>
+                <h6>Basmatirice with different delicious curries</h6>
+            </div>
+        </div>
+        <div class="main-course-wrapper">
+            <div class="dish-image-wrapper">
+                <img src="../Reseguide-Mauritius/Images/Shrimp.JPG" alt="sallad">
+            </div>
+            <div class="main-course-name-wrapper">
+                <h5>Riz Frite</h5>
+                <h6>traditional Cantonese styled fried rice, Mauritian fried rice is cooked in a creole style without a thick gravy or sauce poured in.</h6>
+            </div>
+        </div>
+
+        <!-- Row 3 -->
+        <div class="main-course-wrapper">
+            <div class="dish-image-wrapper">
+                <img src="../Reseguide-Mauritius/Images/CrayFish.JPG" alt="sallad">
+            </div>
+            <div class="main-course-name-wrapper">
+                <h5>Cray Fish in the own</h5>
+                <h6>A touch of French influences</h6>
+            </div>
+        </div>
+        <div class="main-course-wrapper">
+            <div class="dish-image-wrapper">
+                <img src="../Reseguide-Mauritius/Images/Thali.JPG" alt="sallad">
+            </div>
+            <div class="main-course-name-wrapper">
+                <h5>Delicious Indien Special</h5>
+                <h6>Rice with 7 different items</h6>
+            </div>
+        </div>
+
+        <!-- Row 4 -->
+        <div class="main-course-wrapper">
+            <div class="dish-image-wrapper">
+                <img src="../Reseguide-Mauritius/Images/Räkor.JPG" alt="sallad">
+            </div>
+            <div class="main-course-name-wrapper">
+                <h5>Delicious fried Shrimps</h5>
+                <h6>Cherry tomato, shaved almonds, shal lot ninaigrette</h6>
+            </div>
+        </div>
+        <div class="main-course-wrapper">
+            <div class="dish-image-wrapper">
+                <img src="../Reseguide-Mauritius/Images/vadai.JPG" alt="sallad">
+            </div>
+            <div class="main-course-name-wrapper">
+                <h5>Indien Style</h5>
+                <h6>Cherry tomato, chili, oil and grains</h6>
+            </div>
+        </div>
+    </section>
+
+
+    <!--Footer section------------------------------>
+    <section class="footer">
+        <div class="footer-content">
+            <p><i class="fa fa-copyright" aria-hidden="true">Research Travels AB</i></p>
+            <p>researchtravels@information.se</p>
+            <p>&copy;My World 2024</p>
+
+        </div>
+
+    </section>
+
+
+    
+</body>
+</html>
